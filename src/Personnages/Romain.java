@@ -8,6 +8,42 @@ public class Romain {
 	public Romain(String nom, int force) {
 		this.nom = nom;
 		this.setForce(force);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 	public String getNom() {

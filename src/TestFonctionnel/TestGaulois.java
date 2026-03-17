@@ -6,7 +6,7 @@ import Personnages.Romain;
 public class TestGaulois {
 	
 	
-	public static void main() {
+	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois ("Astérix",8);
 		
 		Gaulois obelix = new Gaulois ("Obélix",16);
@@ -22,6 +22,7 @@ public class TestGaulois {
 		for ( int i =0; i<3; i++) {
 			asterix.frapper(minus);
 		}
+		
 		
 	}
 }
