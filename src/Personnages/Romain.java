@@ -1,13 +1,13 @@
-package Personages;
+package Personnages;
 
 public class Romain {
 	private String nom;
-	private int force;
-	private Object ;
+	private int force; 
+
 
 	public Romain(String nom, int force) {
 		this.nom = nom;
-		this.force = force;
+		this.setForce(force);
 	}
 
 	public String getNom() {
@@ -24,12 +24,20 @@ public class Romain {
 	
 	public void recevoirCoup(int forceCoup, int force) {
 
-		self.force = self.force - forceCoup;
-		if (self.force > 0) {
+		force = force - forceCoup;
+		if (force > 0) {
 			System.out.println (nom + " : aie");
 		}else { 
 				System.out.println( nom +" : j'abandonne !");
 		}
 		
+	}
+
+	public int getForce() {
+		return force;
+	}
+
+	public void setForce(int force) {
+		this.force = force;
 	}
 }
