@@ -15,7 +15,7 @@ public class Gaulois {
 	
 	public void frapper(Romain romain) {
 		System.out.println( nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
-		romain.recevoirCoup(force / 3,force);
+		romain.recevoirCoup(force / 3);
 	}
 
 	public void parler(String texte) {
@@ -23,7 +23,7 @@ public class Gaulois {
 	}
 
 	public String prendreParole(String string) {
-		return "Le gaulois " + nom + " : ";
+		return (" Le gaulois " + nom + " : ");
 	}
 
 	public static void main(String[] args) {
