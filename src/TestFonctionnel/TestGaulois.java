@@ -1,5 +1,7 @@
 package TestFonctionnel;
 
+import Objets.Chaudron;
+import Personnages.Druide;
 import Personnages.Gaulois;
 import Personnages.Romain;
 
@@ -7,7 +9,7 @@ public class TestGaulois {
 	
 	
 	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois ("Astérix",8);
+		Gaulois asterix = new Gaulois ("Astérix",6);
 		
 		Gaulois obelix = new Gaulois ("Obélix",16);
 		
@@ -23,6 +25,17 @@ public class TestGaulois {
 			asterix.frapper(minus);
 		}
 		
+		Romain brutus = new Romain("Brutus",14);
+		Druide panoramix = new Druide ("Panoramix",2);
+		Chaudron chaudron = new Chaudron (0,0);
 		
+		panoramix.fabriquerPotion(4,3,chaudron);
+		panoramix.booster(obelix, chaudron);
+		panoramix.booster(asterix, chaudron);
+		
+		
+		for ( int i =0; i<3; i++) {
+			asterix.frapper(brutus);
+		}
 	}
 }
