@@ -4,14 +4,18 @@ import Objets.Chaudron;
 import Personnages.Druide;
 import Personnages.Gaulois;
 import Personnages.Romain;
+import VillageGaulois.Village;
 
 public class TestGaulois {
 	
 	
 	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois ("Astérix",6);
 		
-		Gaulois obelix = new Gaulois ("Obélix",16);
+		String[] villageois = new String[5]; 
+		Village village = new Village("village",2,villageois ,"a");
+		Gaulois asterix = new Gaulois ("Astérix",6,village);
+		
+		Gaulois obelix = new Gaulois ("Obélix",16,village);
 		
 		asterix.parler("Bonjour Obélix");
 		obelix.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?");

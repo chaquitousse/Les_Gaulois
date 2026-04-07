@@ -1,15 +1,21 @@
 package Personnages;
 
+import VillageGaulois.Village;
+
 public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion;
+	private Village Village;
 
-	public Gaulois(String nom, int force) {
+	public Gaulois(String nom, int force, VillageGaulois.Village village) {
 		this.nom = nom;
 		this.force = force;
 		this.setEffetPotion(1);
+		this.Village=null;
 	}
+
+	
 
 	public String getNom() {
 		return nom;
@@ -33,8 +39,11 @@ public class Gaulois {
 	}
 
 	public static void main(String[] args) {
+		String[]tab=new String[30];
+		Village village = new Village ( "Village des Irréductibles",30,tab,"Abraracourcix");
 		Gaulois asterix;
-		asterix = new Gaulois("Astérix", 8);
+
+		asterix = new Gaulois("Astérix",6,village);
 		System.out.println(asterix);
 
 	}
@@ -54,5 +63,21 @@ public class Gaulois {
 	
 	public void boirePotion(int forcePotion) {
 		this.effetPotion=forcePotion;
+	}
+	
+	
+	
+
+
+
+
+	public Village getVillage() {
+		return Village;
+	}
+
+
+
+	public void setVillage(Village village) {
+		Village = village;
 	}
 }
