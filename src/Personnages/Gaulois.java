@@ -17,6 +17,12 @@ public class Gaulois {
 
 	
 
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	
+
 	public String getNom() {
 		return nom;
 	}
@@ -79,5 +85,11 @@ public class Gaulois {
 
 	public void setVillage(Village village) {
 		Village = village;
+	}
+	
+	
+	public void sePresenter(Gaulois gaulois) {
+		System.out.println("Bonjour, je m'appelle "+gaulois.getNom()+".");
+		
 	}
 }

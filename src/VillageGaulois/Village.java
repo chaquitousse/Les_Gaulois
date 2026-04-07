@@ -6,7 +6,7 @@ public class Village {
 	
 	private String nom; 
 	private int nombre_de_villageaois;
-	private String[] villageois;
+	private Gaulois[] villageois;
 	private String chef;
 	
 	
@@ -15,13 +15,15 @@ public Village(String nom, int nombre_de_villageaois,String[] villageois,String 
 	super();
 	this.setNom(nom);
 	this.setNombre_de_villageaois(nombre_de_villageaois);
-	this.villageois = new String[this.nombre_de_villageaois]; 	
+	this.villageois = new Gaulois[this.nombre_de_villageaois]; 	
 	this.chef= chef;
 }
 
 
 
-
+public String getChef() {
+	return chef;
+}
 
 public String getNom() {
 	return nom;
@@ -51,7 +53,7 @@ public void ajouter_villageois(Gaulois nv_villageois, Village village) {
 	for (int i = 0; villageois[i]!=null; i++) {
 		ind_placement=i;
 	}
-	villageois[ind_placement]=nv_villageois.getNom();
+	villageois[ind_placement]=nv_villageois;
 	nv_villageois.setVillage(village);
 }
 public Gaulois TrouverVillageois(int numero_villageois) {
@@ -60,18 +62,19 @@ public Gaulois TrouverVillageois(int numero_villageois) {
 		return null;
 	}else {
 		if (this.villageois[numero_villageois-1]!=null) {
-		return this.villageois[numero_villageois-1];
+		return villageois[numero_villageois-1];
 		}
+	System.out.println("Il n’y a pas autant d’habitants dans notre village !");
 	return null;
 	}
 }
 
-public String[] getVillageois() {
+public Gaulois[] getVillageois() {
 	return villageois;
 }
 
 
-public void setVillageois(String[] villageois) {
+public void setVillageois(Gaulois[] villageois) {
 	this.villageois = villageois;
 }
 
@@ -93,4 +96,14 @@ public static void main(String[] args) {
 	System.out.println(gaulois); 
 	
 }
+
+public void afficherVillageois (Village village) {
+	int i = 0;
+	System.out.println("Dans le village " +  village.getNom() + " du chef " +  village.getChef() + "vivent les légendaires gaulois : \n");
+	while(this.villageois[i]!=null) {
+		System.out.println("-" +  villageois[i].getNom() + "\n");
+	} 
+}
+
+
 }
