@@ -50,12 +50,13 @@ public String getChef( Gaulois chef) {
 
 public void ajouter_villageois(Gaulois nv_villageois, Village village) {
 	int ind_placement=0;
-	for (int i = 0; villageois[i]!=null; i++) {
-		ind_placement=i;
+	while(village.villageois[ind_placement]!=null) {
+		ind_placement+=1;
 	}
 	villageois[ind_placement]=nv_villageois;
 	nv_villageois.setVillage(village);
 }
+
 public Gaulois TrouverVillageois(int numero_villageois) {
 	if (numero_villageois-1>this.nombre_de_villageaois) {
 		System.out.println("Il n’y a pas autant d’habitants dans notre village !");
@@ -78,6 +79,15 @@ public void setVillageois(Gaulois[] villageois) {
 	this.villageois = villageois;
 }
 
+public void afficherVillageois (Village village) {
+	int i = 0;
+	System.out.println("Dans le village " +  village.getNom() + " du chef " +  village.getChef() + " vivent les légendaires gaulois : \n");
+	while(this.villageois[i]!=null) {
+		System.out.println("-" +  villageois[i].getNom() + "\n");
+		i+=1;
+	} 
+}
+
 
 public static void main(String[] args) {
 	String[]tab=new String[30];
@@ -95,14 +105,20 @@ public static void main(String[] args) {
 	gaulois = village.TrouverVillageois(2); 
 	System.out.println(gaulois); 
 	
-}
-
-public void afficherVillageois (Village village) {
-	int i = 0;
-	System.out.println("Dans le village " +  village.getNom() + " du chef " +  village.getChef() + "vivent les légendaires gaulois : \n");
-	while(this.villageois[i]!=null) {
-		System.out.println("-" +  villageois[i].getNom() + "\n");
-	} 
+	Gaulois Obelix = new Gaulois ("Obélix",25,village);
+	Gaulois DoublePolemix = new Gaulois ("DoublePolémix",4,null);
+	village.ajouter_villageois(Obelix,village);
+	village.afficherVillageois(village);
+	
+	Asterix.sePresenter(Asterix);
+	Abraracourcix.sePresenter(Abraracourcix);
+	DoublePolemix.sePresenter(DoublePolemix);
+	
+	
+	
+	
+	
+	
 }
 
 

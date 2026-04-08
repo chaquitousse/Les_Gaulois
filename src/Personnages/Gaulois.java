@@ -2,17 +2,17 @@ package Personnages;
 
 import VillageGaulois.Village;
 
-public class Gaulois {
+public class Gaulois extends Personnage {
 	private String nom;
 	private int force;
 	private int effetPotion;
-	private Village Village;
+	private Village Village ;
 
 	public Gaulois(String nom, int force, VillageGaulois.Village village) {
 		this.nom = nom;
 		this.force = force;
 		this.setEffetPotion(1);
-		this.Village=null;
+		this.Village = village;
 	}
 
 	
@@ -41,7 +41,7 @@ public class Gaulois {
 	}
 
 	public String prendreParole(String string) {
-		return (" Le gaulois " + nom + " : ");
+		return (" Le gaulois " + nom + " : " );
 	}
 
 	public static void main(String[] args) {
@@ -89,7 +89,18 @@ public class Gaulois {
 	
 	
 	public void sePresenter(Gaulois gaulois) {
-		System.out.println("Bonjour, je m'appelle "+gaulois.getNom()+".");
+		parler("Bonjour, je m'appelle "+ gaulois.getNom()+".");
+		if(gaulois.Village == null) {
+			System.out.println("Je suis un Gaulois sans village");
+			return;
+		}
+		if (gaulois.Village.getChef() == gaulois.nom) {
+			System.out.println("Je suis le chef du Village : "+gaulois.Village.getNom()+".");
+		}
+		else {
+			System.out.println("Je suis un Gaulois du Village : "+gaulois.Village.getNom()+".");
+		}
+		}
+		}
 		
-	}
-}
+	

@@ -1,11 +1,8 @@
 package Personnages;
 
-public class Romain {
-	private String nom;
-	private int force; 
-
-
+public class Romain extends Personnage {
 	public Romain(String nom, int force) {
+		super();
 		this.nom = nom;
 		this.setForce(force);
 		
@@ -46,18 +43,6 @@ public class Romain {
 		
 	}
 
-	public String getNom() {
-		return nom;
-	}
-
-	public void parler(String texte) {
-		System.out.println(prendreParole() + "\"" + texte + "\"");
-	}
-
-	private String prendreParole() {
-		return "Le romain " + nom + " : ";
-	}
-	
 	public void recevoirCoup(int forceCoup) {
 
 		force = force - forceCoup;
