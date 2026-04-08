@@ -21,7 +21,7 @@ public class TestGaulois {
 		obelix.parler("Bonjour Astérix. Ca te dirais d'aller chasser des sangliers ?");
 		asterix.parler("Oui très bonne idée.");
 		
-		Romain minus = new Romain("Minus",6);
+		Romain minus = new Romain("Minus",6,null,0);
 		
 		System.out.println(" Dans la forêt " + asterix.getNom() +" et " + obelix.getNom() + " tombent nez à nez sur le romain " + minus.getNom());
 		
@@ -29,7 +29,7 @@ public class TestGaulois {
 			asterix.frapper(minus);
 		}
 		
-		Romain brutus = new Romain("Brutus",14);
+		Romain brutus = new Romain("Brutus",14,null,0);
 		Druide panoramix = new Druide ("Panoramix",2);
 		Chaudron chaudron = new Chaudron (0,0);
 		

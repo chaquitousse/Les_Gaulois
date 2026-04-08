@@ -12,7 +12,6 @@ public class Village {
 	
 
 public Village(String nom, int nombre_de_villageaois,String[] villageois,String chef) {
-	super();
 	this.setNom(nom);
 	this.setNombre_de_villageaois(nombre_de_villageaois);
 	this.villageois = new Gaulois[this.nombre_de_villageaois]; 	
@@ -113,6 +112,9 @@ public static void main(String[] args) {
 	Asterix.sePresenter(Asterix);
 	Abraracourcix.sePresenter(Abraracourcix);
 	DoublePolemix.sePresenter(DoublePolemix);
+	
+	
+	
 	
 	
 	
