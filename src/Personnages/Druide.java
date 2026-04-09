@@ -22,7 +22,7 @@ public class Druide {
 		return "Le druide " + nom + " : ";
 	}
 	
-	public void fabriquerPotion (int quantite, int forcePotion, Chaudron chaudron) {
+	public void fabriquerPotion (int quantite, int forcePotion,Chaudron chaudron) {
 		chaudron.remplirChaudron(quantite,forcePotion);
 		parler("J'ai concocté"+ quantite + "potions magiques de force"+forcePotion+".");
 		quantite += quantite;
@@ -33,7 +33,7 @@ public class Druide {
 			parler("Désolé"+gaulois.getNom()+"il n'y a plus un goutte de potion magique pour toi.");
 		}else {
 			if (gaulois.getNom()=="Obélix" ) {
-				parler("NON"+gaulois.getNom()+"non ! ... Et tu le sais très bien !");
+				parler("NON "+gaulois.getNom()+" non ! ... Et tu le sais très bien !");
 			}else {
 				chaudron.prendreLouche();
 				gaulois.boirePotion(chaudron.getForcePotion());
