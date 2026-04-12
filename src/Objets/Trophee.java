@@ -1,6 +1,7 @@
 package Objets;
 
 import Personnages.Gaulois;
+import VillageGaulois.Musee;
 
 public class Trophee {
 private Gaulois gaulois;
@@ -14,6 +15,14 @@ public Trophee(Gaulois gaulois, Equipement equipement) {
 }
 
 
+public void extraireInstructionsOCaml(Musee musee) {
+	System.out.println("let musee = [");
+	for (int i =0; i < musee.getNbTrophee(); i++) {
+		System.out.println(this.gaulois.getNom()+","+this.equipement.name()+";");
+		
+	}
+	System.out.println("]");
+}
 
 
 public Gaulois getGaulois() {

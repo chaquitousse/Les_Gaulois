@@ -2,6 +2,7 @@ package histoire;
 
 import Personnages.Gaulois;
 import Personnages.Romain;
+import VillageGaulois.Musee;
 import Personnages.Druide;
 import Objets.Chaudron;
 import Objets.Equipement;
@@ -40,15 +41,14 @@ public class Scenario {
 		
 		
 		
-//		PARTIE 5 : a decommenter
-//		milexcus.parler("UN GAU... UN GAUGAU...");
-//		do {
-//			obelix.frapper(milexcus);
-//		} while (milexcus.getForce() > 0);
+		milexcus.parler("UN GAU... UN GAUGAU...");
+		do {
+			obelix.frapper(milexcus);
+		} while (milexcus.getForce() > 0);
 
 
-//		Musee musee = new Musee();
-//		obelix.faireUneDonnation(musee);
+		Musee musee = new Musee();
+	obelix.faireUneDonation(musee,obelix);
 
 	}
 

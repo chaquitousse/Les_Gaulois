@@ -1,6 +1,7 @@
 package Personnages;
 
 import Objets.Equipement;
+import VillageGaulois.Musee;
 import VillageGaulois.Village;
 
 public class Gaulois extends Personnage {
@@ -111,6 +112,22 @@ public class Gaulois extends Personnage {
 		Village = village;
 	}
 	
+	
+	public void faireUneDonation (Musee musee,Gaulois gaulois) {
+		
+		if (this.nb_trophees>0) {
+			gaulois.parler("Je donne au musée tous mes trophées :");
+			for (int i = 0 ; i < this.nb_trophees; i++ ) {
+			System.out.println("-"+this.trophees[i]);
+			 musee.DonnerTrophees(gaulois,this.trophees[i]);
+			 this.trophees[i]=null;
+			}
+			nb_trophees = 0;
+			
+		}else {
+			gaulois.parler("Je n'ai rien à donner pour le moment ...");
+		}
+	}
 	
 	public void sePresenter(Gaulois gaulois) {
 		parler("Bonjour, je m'appelle "+ gaulois.getNom()+".");

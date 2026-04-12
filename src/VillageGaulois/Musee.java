@@ -11,7 +11,23 @@ public class Musee {
 	
 	public void DonnerTrophees(Gaulois donnateur, Equipement don) {
 		Trophee tresor = new Trophee(donnateur,don);
-		nbTrophee+=1;
-		trophees[nbTrophee]= tresor ;
+		setNbTrophee(getNbTrophee() + 1);
+		trophees[getNbTrophee()]= tresor ;
 	}
+
+
+	public int getNbTrophee() {
+		return nbTrophee;
+	}
+
+
+	public void setNbTrophee(int nbTrophee) {
+		this.nbTrophee = nbTrophee;
+	}
+
+
+	
+	
+	
+
 }
