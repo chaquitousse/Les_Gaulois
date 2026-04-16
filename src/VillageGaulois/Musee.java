@@ -26,8 +26,17 @@ public class Musee {
 	}
 
 
-	
-	
-	
+	public void extraireInstructionsOCaml(Musee musee) {
+		System.out.println("let musee = [");
+		for (int i =1; i < musee.getNbTrophee()+1; i++) {
+			
+			System.out.println("\""+musee.trophees[i].donnerNom()+","+musee.trophees[i].getEquipement()+";\"");
+			
+		}
+		System.out.println("]");
+	}
 
+	
 }
+
+

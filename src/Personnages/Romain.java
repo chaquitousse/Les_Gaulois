@@ -52,7 +52,7 @@ public class Romain {
 		}
 	
 	private int CalculResistanceEquipement(int forceCoup) {
-		System.out.println( "Ma force est de " + this.force + ", et la force du coup est de" + forceCoup);
+		System.out.println( "Ma force est de " + this.force + ", et la force du coup est de " + forceCoup);
 		int resistanceEquipement = 0;
 		if (!(nbEquipement == 0)) {
 		System.out.println( "\nMais heureusement, grace à mon équipement sa force");

@@ -41,15 +41,13 @@ public class Scenario {
 		
 		
 		
-		milexcus.parler("UN GAU... UN GAUGAU...");
-		do {
-			obelix.frapper(milexcus);
-		} while (milexcus.getForce() > 0);
+		
 
 
 		Musee musee = new Musee();
 	obelix.faireUneDonation(musee,obelix);
-
+	
+	musee. extraireInstructionsOCaml(musee);
 	}
 
 }
